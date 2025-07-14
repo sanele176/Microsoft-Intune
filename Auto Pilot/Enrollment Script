@@ -1,0 +1,10 @@
+- First change execution policy on laptop
+ set-executionpolicy bypass -force
+ 
+ - Install auto pilot script
+ install-script get-windowsautopilotinfo -force
+
+ - Now run it
+ get-windowsautopilotinfo -online
+
+ - Login once prompted
