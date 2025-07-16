@@ -1,0 +1,17 @@
+🔧 Steps to Disable Windows Hello for Business (PIN) via Intune
+
+1. Go to Microsoft Intune Admin Center
+URL: https://intune.microsoft.com
+2. Create a Configuration Profile
+Platform: Windows 10 and later
+Profile type: Settings catalog
+3. Configure the Settings
+In the Settings picker, search for Windows Hello for Business.
+Add the following settings:
+Setting	Value
+Use Windows Hello for Business	Disabled
+Configure Windows Hello for Business	Disabled
+This will disable the use of PIN, facial recognition, and fingerprint sign-in.
+
+4. Assign the Profile
+Assign it to the device group or user group you want to target.
