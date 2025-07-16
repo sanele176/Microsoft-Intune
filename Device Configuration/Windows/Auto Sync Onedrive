@@ -1,0 +1,27 @@
+
+To auto-sync OneDrive on Windows devices managed by Intune, 
+you can configure a Device Configuration Profile that sets up OneDrive to automatically sign in and sync known folders (like Desktop, 
+Documents, and Pictures). This is commonly done using Group Policy settings via Intune.
+
+✅ Steps to Auto-Sync OneDrive via Intune
+1. Go to Intune Admin Center
+URL: https://intune.microsoft.com
+2. Create a Configuration Profile
+Platform: Windows 10 and later
+Profile type: Settings catalog
+3. Configure OneDrive Settings
+In the Settings picker, search for and add the following:
+
+Setting	Value
+Silently sign in users to the OneDrive sync app with their Windows credentials	Enabled
+Silently move Windows known folders to OneDrive	Enabled
+Prevent users from redirecting their Windows known folders to other locations	Enabled
+Prompt users to move Windows known folders to OneDrive	Disabled
+Use OneDrive Files On-Demand	Enabled
+These settings ensure OneDrive auto-signs in and starts syncing folders without user interaction.
+
+4. Assign the Profile
+Assign it to the appropriate device group or user group.
+🧠 Notes
+Make sure users have OneDrive installed and are licensed for OneDrive for Business.
+You can also deploy the OneDrive client via Intune if needed.
