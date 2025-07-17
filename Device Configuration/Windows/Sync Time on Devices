@@ -1,0 +1,37 @@
+To sync time on Windows devices via Microsoft Intune, you can configure the Windows Time Service (W32Time) 
+using an Administrative Template profile. Here's a step-by-step guide:
+
+✅ Steps to Sync Time via Intune (Using NTP Server)
+1. Open Microsoft Intune Admin Center
+Go to: https://intune.microsoft.com
+
+2. Create a Configuration Profile
+Navigate to Devices > Configuration profiles > + Create profile
+Platform: Windows 10 and later
+
+Profile type: Templates > Administrative Templates (retired) use setting catalog
+
+3. Configure Windows Time Service
+In the profile settings, search for Windows Time Service.
+
+Enable the following settings:
+
+Enable Windows NTP Client: Set to Enabled
+Configure Windows NTP Client:
+NtpServer: time.windows.com,0x9 (or your preferred NTP server) e.g : sz.pool.ntp.org
+Type: NTP
+CrossSiteSyncFlags: 2
+ResolvePeerBackoffMinutes: 15
+ResolvePeerBackoffMaxTimes: 7
+SpecialPollInterval: 3600
+EventLogFlags: 0
+4. Assign the Profile
+Assign the profile to the appropriate device groups.
+5. Monitor Deployment
+Go to Devices > Monitor > Configuration profiles to check deployment status.
+
+🕒 Optional: Set Time Zone
+If you also want to configure the time zone:
+
+Create a Settings Catalog profile.
+Search for Time Zone and set it (e.g., China Standard Time for your region).
