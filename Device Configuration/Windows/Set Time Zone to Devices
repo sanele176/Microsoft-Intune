@@ -1,0 +1,9 @@
+✅ To Set This in Intune:
+When configuring a Settings Catalog profile in Intune:
+
+Go to Devices > Configuration profiles > + Create profile
+Platform: Windows 10 and later
+Profile type: Settings catalog
+Add setting: Search for Time Zone
+Set the value to:
+South Africa Standard Time
