@@ -1,0 +1,6 @@
+Add local admin rights
+- Add-LocalGroupMember -Group "Administrators" -Member "AzureAD\emailID"
+
+Remove local admin rights
+- Remove-LocalGroupMember -Group "Administrators" -Member "AzureAD\emailID"
+
