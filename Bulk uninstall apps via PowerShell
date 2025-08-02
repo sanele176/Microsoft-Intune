@@ -1,0 +1,1 @@
+winget uninstall "appname1","appname2" --silent
