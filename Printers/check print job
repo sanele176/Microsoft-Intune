@@ -1,0 +1,5 @@
+Get-PrintJob -PrinterName "Printer name" | Sort-Object -Property SubmittedTime -Descending | Select -First 1
+
+  or to check pending jobs
+
+Get-PrintJob -PrinterName "printer name"
