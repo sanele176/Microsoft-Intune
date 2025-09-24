@@ -1,0 +1,10 @@
+- download office deployment tool
+- select working folder
+- download office customization tool, select visio
+- turn off onedrive desktop on customization tool
+- turn off Uninstall any MSI versions of Office, including Visio and Project
+- export and move xml to Visio folder and delete old customization file
+- move visio folder to "C:\"
+- open cmd as admin, navigate to folder and run
+  setup /configure configuration.xml
+  
